@@ -1,0 +1,190 @@
+// Mobile-First
+.nav-header {
+  display: flex;
+  height: 3.5em;
+  color: var(--color-text);
+  justify-content: space-between;
+  // align-items: center; // vert alignment
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  padding: 0.5rem;
+  background-color: var(--navbar-color-a);
+  border-bottom: 1px solid var(--navbar-color-border);
+  transition: 0.5s;
+  // background-color: rgba($color: $light-bg, $alpha: 1.0);
+  // &.dark-winter {
+    // background-color: rgba($color: $dark-primary, $alpha: 0.75);
+    // border-bottom: 1px solid $dark-pt-winter;
+    // color: $dark-color-text;
+  // }
+  // &.dark-summer {
+    // background-color: rgba($color: $dark-bg, $alpha: 0.75);
+    // border-bottom: 1px solid $dark-pt-summer;
+    // color: $dark-pt-summer;
+  // }
+  .nav-logo {  
+    font-size: 1.6rem;
+    margin: 0.5rem;
+    white-space: nowrap;
+    // dar themes
+  }
+  .toggler {
+    z-index: 200;
+    display: none;
+    &:checked ~ div nav .nav__item-list {
+      left: 0;
+    }
+  }
+  .burger {
+    cursor: pointer;
+    position: absolute;
+    top: 0.8rem;
+    right: 1rem;
+    // display: none;
+    flex-direction: column;
+    margin: 0.5rem;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    // add dark themes
+  }
+  .nav-container {
+    margin: 0.5rem;
+    .nav {
+      align-items: center;
+      margin: 0.5rem;
+      &__item-list {
+        // height: 100%;
+        // margin: 0; // ---
+        // padding: 0; // ---
+        // display: flex; // ---
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        // background-color: rgba($color: $dark-primary, $alpha: .90);
+        background-color: var(--main-bg-a);
+        top: 3.5em;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        // padding: 0 1rem;
+        // dark themes
+        // &.dark-winter {
+          // background-color: $dark-primary;
+          
+        // }
+        // &.dark-summer {
+          // background-color: $dark-bg;
+          
+        // }
+      }
+      &__item-list--secondary {
+        margin-top: -0.4rem;
+        margin-right: 3rem;
+        margin-left: 0.6rem;
+        // dark-themes?
+      }
+      &__item {
+        list-style: none;
+        display: block;
+        margin: 2rem 0;
+        line-height: 3rem;
+        padding: 0 1rem;
+        // dark themes
+      }
+      &__link {
+        position: relative;
+        // display: block;
+        text-decoration: none;
+        font-size: 1rem;
+        color: inherit;
+        // text-transform: uppercase;
+        // padding: 0 1rem;
+        transition: 0.5s;
+        &::after {
+          position: absolute;
+          content: "";
+          width: 100%;
+          height: 3px;
+          top: 100%;
+          left: 0;
+          background: var(--li-border);
+          transition: transform 0.5s;
+          transform: scaleX(0);
+          transform-origin: right;
+          // &:hover {
+          //   margin: 0 auto;
+          //   width: 50%;
+          //   border-bottom: 1px solid var(--li-border);
+          //   padding-bottom: 0.25rem;
+          //   transition: ease-in-out .1s;
+          // }
+        }
+        &:hover {
+          // color: var(--li-border);
+          &::after {
+            transform: scaleX(1);
+            transform-origin: leftt;
+          }
+          // margin: 0 auto;
+          // width: 50%;
+          // border-bottom: 1px solid var(--li-border);
+          // padding-bottom: 0.25rem;
+          // transition: ease-in-out .1s;
+  
+          // border-bottom: 1px solid var(--li-border);
+          // padding-bottom: 0.25rem;
+          // transition: ease-in-out .1s;
+        }
+        
+        // &.dark-winter {
+        //   color: $dark-color-text;
+        //   &:hover {
+        //     border-bottom: 1px solid $dark-pt-winter;
+        //     padding-bottom: 0.25rem;
+        //     transition: ease-in-out .1s;
+        //   }
+        // }
+        // &.dark-summer {
+        //   color: $dark-color-text;
+        //    &:hover {
+        //     border-bottom: 1px solid $dark-pt-summer;
+        //     padding-bottom: 0.25rem;
+        //     transition: ease-in-out .1s;
+        //   }
+        // }
+      }
+
+    }
+  }
+}
+
+// Desktop Screen Format
+@media (min-width: 820px) {
+  .burger {
+    display: none;
+  }
+  .nav-header {
+    .nav-container {
+      .nav {
+        display: flex;
+        align-items: center;
+        margin-top: 0rem;
+        &__item-list {
+          all: unset;
+          list-style: none;
+          display: flex;
+        }
+        &__item-list--secondary {
+          margin-top: 0rem;
+          margin-right: 0rem;
+        }
+        &__item {
+          margin: 0;
+          line-height: 0;
+        }
+      }
+    }
+  }
+}

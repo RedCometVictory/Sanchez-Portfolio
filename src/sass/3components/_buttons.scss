@@ -1,0 +1,44 @@
+#theme-active {
+  border-radius: 3px 0px 0px 3px;
+  // &.dark-winter-fill {
+    // background-color: $dark-pt-winter;
+  // }
+  // &.dark-summer-fill {
+    // background-color: $dark-pt-summer;
+  // }
+}
+#theme-switch {
+  border-radius: 0px 3px 3px 0px;
+  // color: rgb(45, 45, 45);
+  // &.dark-winter-sw {
+    // background-color: $dark-pt-winter;
+    // color: black;
+  // }
+  // &.dark-summer-sw {
+    // background-color: $dark-pt-summer;
+    // color: black;
+  // }
+}
+.nav-btn {
+  // height: 1.5rem;
+  // background-color: rgba($color: #000000, $alpha: 0);
+  // background-color: rgba($color: var(--color-navbar), $alpha: 0.65);
+  background-color: var(--navbar-btn-a);
+  color: var(--navbar-btn-icon);
+  border: 2px solid var(--color-navbar-border-a);
+  transition: 0.5s;
+  // &.dark-winter {
+    // background-color: rgba($color: $dark-pt-winter, $alpha: 1);
+    // border: solid 2px $dark-pt-winter;
+  // }
+  // &.dark-summer {
+    // background-color: rgba($color: $dark-pt-summer, $alpha: 1);
+    // border: solid 2px $dark-pt-summer;
+  // }
+}
+
+
+// @media (min-width: 820px) {
+
+// }
+// themes for button, header, text, background and panels

@@ -1,85 +1,82 @@
 import { 
-  themeActive, themeSwitch
+  themeActive, themeSwitch, rootElem, themeIcon
 } from './components/elemName.js';
 import { activeTheme, switchTheme } from './components/activeTheme';
-import { launchParticlesAndTheme } from './components/particleTheme';
+import { launchParticles } from './components/particleTheme';
 
-// document.addEventListener('DOMContentLoaded', () => { // ---+++
-// function initializes library
-// load particles into DOM
+export let selectedTheme = localStorage.getItem('selected-theme');
+
+// may need to compile bundle for webpack (wrap around code)
+// document.addEventListener('DOMContentLoaded', () => {}) // ---+++
+// function inits library - load particles into DOM
+// window.onload =
 particlesJS.load('particles-js', 'particles-w.json', function() {
-  // console.log("default theme active");
-  console.log('particles.bundle.js loaded - default theme');
+  // console.log('particles.bundle.js loaded');
   // callback - load theme per localStorage value
-  launchParticlesAndTheme();
-})
+  launchParticles();
+});
+
 
 themeActive.addEventListener('click', activeTheme);
 themeSwitch.addEventListener('click', switchTheme);
 
+const lightTheme = function() {
+  console.log('switched to: light theme');
+  // lightParticles();
+  localStorage.setItem('selected-theme', 'light');
+  themeActive.value = "true";
+  // remove dark theming
+  rootElem.classList.remove('dark-winter');
+  rootElem.classList.remove('dark-summer');
+}
+const darkWinterTheme = function() {
+  console.log('switched to: dark winter theme');
+  localStorage.setItem('selected-theme', 'dark-winter');
+  themeActive.value = "false";
+  rootElem.classList.remove('dark-summer');
+  rootElem.classList.add('dark-winter');
+}
+const darkSummerTheme = function() {
+  console.log('switched to: dark summer theme');
+  localStorage.setItem('selected-theme', 'dark-summer');
+  themeActive.value = "false";
+  rootElem.classList.remove('dark-winter');
+  rootElem.classList.add('dark-summer');
+}
 
+if (!selectedTheme) {
+      console.log('selected-theme is undefined or null, thus setting light as default theme');
+    localStorage.setItem('selected-theme', 'light');
+}
 
+if (selectedTheme === 'light') {
+  // check localstorage value to select theme (attach/remove class to elems)
+    // console.log('startup: launching light particles');
+    // launchParticles();
+    // lightParticles();
+    // console.log('startup: launching light theme');
+    lightTheme(); // set / remove classes
+};
+  
+if (selectedTheme === 'dark-winter') {
+    // console.log('startup: launching dark winter particles');
+    // darkWinterParticles();
+    // launchParticles();
+    // console.log('startup: launching dark winter theme');
+    darkWinterTheme();
+};
 
+if (selectedTheme === 'dark-summer') {
+  // console.log('startup: launching dark summer particles');
+  if (themeIcon.classList.contains('fa-moon')) {
+    themeIcon.classList.remove('fa-moon');
+    themeIcon.classList.add('fa-sun');
+    themeSwitch.value = "true"
+  }
+  // console.log('startup: launching dark summer theme');
+  // darkSummerParticles();
+  // launchParticles();
+  darkSummerTheme();
+};
 
-
-
-
-
-
-
-
-
-
-
-// Change Theme
-// user theme = theme
-// document.documentElement refs to the <html> tag in html docs. Essentially the root element of the document.
-// className adds a class to the root <html> tag.
-/*ex) do something like hide a <div> only when JavaScript is enabled.
-document.documentElement.className - 'js';
-css: .js div#id { display: none; }
-*/
-
-
-
-// let rootElem = document.documentElement.className = 
-    // document.documentElement.className = '';
-    // document.documentElement.classList.add(`theme-${user.theme}`);
-
-
-
-
-
-// React syntax -- convert to html
-// const themes = [
-//   'light',
-//   'dark'
-// ];
-
-// <Select defaultValue={user.theme} onChange={changeTheme}>
-//     {themes.map((theme, index) =>
-//         <Option value={theme} key={index}>{theme}</Option>
-//     )}
-// </Select>
-
-// react synax from the controller - convert to html
-// changeTheme = (theme) => {
-//     user.theme = theme;
-    
-//     document.documentElement.className = '';
-//     document.documentElement.classList.add(`theme-${user.theme}`);
-    
-//     alert('Theme updated...');
-// }
-
-
-// particleJS(); import as into other files.
-// }
-// });
-
-// module.exports default = {
-  // myApp
-// }
-
-// export default App;
-// }) // ---+++
+export {launchParticles, lightTheme, darkWinterTheme, darkSummerTheme};

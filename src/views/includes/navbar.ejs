@@ -1,0 +1,39 @@
+  <header class="nav-header">
+    <class class="nav-logo">
+      Jor-EL Sanchez
+    </class>
+    <div id="theme-menu-btn">
+    </div>
+    <input type="checkbox" id="toggler" class="toggler">
+    <label for="toggler" class="burger">
+      <span><i class="fas fa-bars"></i></span>
+    </label>
+    <!-- <i class="fas fa-sun"></i> -->
+    <!-- <i class="fas fa-moon"></i> -->
+    <div class="nav-container row">
+      <nav class="nav">
+        <ul class="nav__item-list">
+          <li class="nav__item">
+            <a class="nav__link" href="/">Home</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="/projects">Projects</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="/tech">Tech</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="/contact">Contact</a>
+          </li>
+          </ul>
+          <ul class="nav__item-list--secondary">
+            <!-- keep as one line to eliminate whitespace node in firefox browsers, btn default is Theme Off -->
+            <!-- <button id="theme-active" class="nav-btn" value="false" onclick="window.myApp.activeTheme()"> -->
+            <button id="theme-active" class="nav-btn" value="false">
+              <i class="fas fa-lightbulb"></i>
+            </button><button id="theme-switch" class="nav-btn" value="false"><i id="theme-icon" class="fas fa-moon"></i></button>
+            <!-- </button><button id="theme-switch" class="nav-btn" value="false" onclick="switchTheme()"><i id="theme-icon" class="fas fa-moon"></i></button> -->
+          </ul>
+        </nav>
+    </div>
+  </header>

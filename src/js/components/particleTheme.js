@@ -7,7 +7,6 @@ const lightParticles = function() {
   window.pJSDom[0].pJS.particles.number.value = 375;
   window.pJSDom[0].pJS.particles.number.density.enable = false;
   window.pJSDom[0].pJS.particles.number.density.value_area = 80;
-  // window.pJSDom[0].pJS.particles.size.value = 110;
   window.pJSDom[0].pJS.tmp.obj.size_value = 6;
   window.pJSDom[0].pJS.tmp.obj.move_speed = 0.7;
   window.pJSDom[0].pJS.particles.color.value = "#89b6d3";

@@ -1,120 +1,61 @@
-<%- include(('../includes/head.ejs')); %>
+<%- include('../includes/head.ejs'); %>
   <title>Project | Restaurant</title>
 </head>
 <body>
-  <%- include(('../includes/navbar.ejs')); %>
+  <%- include('../includes/navbar.ejs'); %>
+  <section class="hero project-background">
+    <div class="project">
+      <h1 class="center-text">
+        Street Eats - Restaurant
+      </h1>
+    </div>
+  </section>
   <main class="container">
     <section class="section">
-      <div class="section__card">
-        <h2 class="section__title">
-          E-Commerce Project
-        </h2>
-        <div class="product">
-          <div class="product__card">
-            <a href="#">
-              <div class="product__img img1">
-                <div class="color-overlay">
-                  <h3 class="product__title">
-                    Social Media
-                  </h3>
-                </div>
+       <div class="detail">
+        <div class="detail__row row1">
+          <div class="detail__content">
+            <h2 class="detail__title">How it's Made</h2>
+            <div class="detail__desc">
+              <div class="detail__icons">
+                <!-- <i class="icon fab fa-react"></i> -->
+                <!-- <i class="icon fab fa-node-js"></i> -->
+                <i class="icon fab fa-sass"></i>
+                <i class="icon fab fa-gulp"></i>
+                <!-- <img class="icon" src="https://img.icons8.com/color/48/000000/mongodb.png" alt="mongo database icon"/> -->
+                <!-- <img class="icon" src="https://img.icons8.com/color/48/000000/redux.png" alt="redux icon"/> -->
+                <%- include('../includes/svg/mysql-svg.ejs') %>
+                <%- include('../includes/svg/laravel-svg.ejs') %>
+                <%# include('../includes/svg/redux-svg.ejs') %>
+                <%- include('../includes/svg/webpack-svg.ejs') %>
+                <!-- <img class="icon" src="https://img.icons8.com/dusk/64/000000/webpack.png" alt="webpack icon"/> -->
               </div>
-            </a>
-            <div class="product__info">
-              <div class="product__resources">
-                <ul>
-                  <li>
-                    <a href="#">
-                      <i class="fab fa-github"></i>
-                      Code
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fas fa-angle-double-right"></i>
-                      Visit
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fas fa-info-circle"></i>
-                      Info
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="product__description">
-                Utilizing Postgres, NodeJS, ReactJS, Redux, and Express. This website is focused on highlighting those important to you in your perosnal community.
+              <div class="detail__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis commodi, neque modi ad quasi quisquam perspiciatis quidem culpa eum iure vitae nostrum, consequatur porro nemo totam, vero excepturi unde voluptates saepe minus. Numquam incidunt nisi atque temporibus omnis, perferendis, provident similique quo sit molestias cum doloribus ex. Accusamus ducimus eos amet sit facilis optio cupiditate maiores quod magnam aliquam. Fugiat?
               </div>
             </div>
           </div>
+          <div class="detail__img img-ecom-1"></div>
+        </div>
+        <div class="detail__row row2">
+          <div class="detail__img img-ecom-2"></div>
+          <div class="detail__content">
+            <h2 class="detail__title">What I Learned</h2>
+            <div class="detail__text">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quis officia eaque et necessitatibus minima maxime alias qui veniam, nostrum rerum quam unde provident doloremque ex ipsum quasi iure vitae quibusdam, sequi ut hic. Perferendis at est fugit ipsa expedita exercitationem illum asperiores quam accusantium recusandae qui obcaecati perspiciatis delectus sed, adipisci modi cupiditate laborum quisquam sequi esse sunt nam. Tenetur, eligendi et! Rem, eveniet tempore.</p>
+            </div>
+          </div>
+        </div>
+        <div class="detail__row row3">
+          <div class="detail__content">
+            <h2 class="detail__title">Conclusion</h2>
+            <div class="detail__text">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quis officia eaque et necessitatibus minima maxime alias qui veniam, nostrum rerum quam unde provident doloremque ex ipsum quasi iure vitae quibusdam, sequi ut hic. Perferendis at est fugit ipsa expedita exercitationem illum asperiores quam accusantium recusandae qui obcaecati perspiciatis delectus sed, adipisci modi cupiditate laborum quisquam sequi esse sunt nam. Rem, eveniet tempore.</p>
+            </div>
+          </div>
+          <div class="detail__img img-ecom-3"></div>
         </div>
       </div>
     </section>
   </main>
-
-
-
-  <section class="section">
-  <div class="section__card card--tech">
-    <h2 class="section__title">
-      Technologies I use:
-    </h2>
-    <div class="tech">
-      <h3>Familiar with:</h3>
-      <div class="tech__set">
-        <div class="tech__skills">
-          <div class="tech__skill_col">
-            <p>HTML</p>
-            <p>CSS</p>
-            <p>JavaScript</p>
-            <p>Sass</p>
-          </div>
-          <div class="tech__skill_col">
-            <p>ReactJs</p>
-            <p>Redux</p>
-            <p>EJS</p>
-          </div>
-        </div>
-        <div class="tech__skills">
-          <div class="tech__skill_col">
-            <p>Express</p>
-            <p>MongoDB</p>
-            <p>Postgres</p>
-            <p>MySQL</p>
-          </div>
-          <div class="tech__skill_col">
-            <p>APIs</p>
-            <p>Git</p>
-            <p>Gulp</p>
-            <p>Webpack</p>
-          </div>
-        </div>
-      </div>
-      <h3>Dipped my toes in:</h3>
-      <div class="tech__set">
-        <div class="tech__skills">
-          <div class="tech__skill_col">
-            <p>Laravel</p>
-            <p>PHP</p>
-          </div>
-          <div class="tech__skill_col">
-            <p>Zurb</p>
-            <p>HTML E-Mails</p>
-          </div>
-        </div>
-        <div class="tech__skills">
-          <div class="tech__skill_col">
-            <p>Wordpress</p>
-            <p>AdonisJS</p>
-          </div>
-          <div class="tech__skill_col">
-            <p>HandlebarsJS</p>
-            <p>TypeScript</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-  <%- include(('../includes/end.ejs')); %>
+<%- include('../includes/end.ejs'); %>

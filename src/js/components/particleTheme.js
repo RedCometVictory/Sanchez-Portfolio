@@ -3,7 +3,7 @@ import { selectedTheme } from '../index';
 // window.pJSDom[0].pJS.particles.number.value = 0; // remove /turn off particles
 // document.addEventListener('DOMContentLoaded', () => {
 const lightParticles = function() {
-  console.log('light particles called')
+  // console.log('light particles called')
   window.pJSDom[0].pJS.particles.number.value = 375;
   window.pJSDom[0].pJS.particles.number.density.enable = false;
   window.pJSDom[0].pJS.particles.number.density.value_area = 80;
@@ -17,7 +17,7 @@ const lightParticles = function() {
   window.pJSDom[0].pJS.fn.particlesRefresh();
 };
 const darkWinterParticles = function() {
-  console.log('dark winter particles called');
+  // console.log('dark winter particles called');
   window.pJSDom[0].pJS.particles.number.value = 240;
   window.pJSDom[0].pJS.particles.number.density.enable = true;
   window.pJSDom[0].pJS.particles.number.density.value_area = 100;
@@ -30,7 +30,7 @@ const darkWinterParticles = function() {
   window.pJSDom[0].pJS.fn.particlesRefresh();
 };
 const darkSummerParticles = function() {
-  console.log('dark summer particles called');
+  // console.log('dark summer particles called');
   window.pJSDom[0].pJS.particles.number.value = 180;
   window.pJSDom[0].pJS.particles.number.density.enable = true;
   window.pJSDom[0].pJS.particles.number.density.value_area = 100;

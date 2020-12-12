@@ -4,6 +4,4 @@ dist
 public
 default.json
 config
-config/default.json
-config/production.json
-client/build
+config/*.json

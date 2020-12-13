@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 let HtmlWebpackPlugin = require("html-webpack-plugin");
-// const WebpackMd5Hash = require('webpack-md5-hash');
+// const WebpackMd5Hash = require('webpack-md5-hash'); // depricated
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
@@ -12,25 +12,28 @@ module.exports = {
   entry: {
     // index: "./resources/assets/js/index.js"    // for adonis
     index: "./src/js/index.js",    // for react/mern
-    app: "./src/js/particles/app.js", 
     particles: "./src/js/particles/particles.js"
   },
   output: {
     // final build goes into dist
-    filename: "[name].[contentHash].bundle.js",
+    // filename: "[name].[contentHash].bundle.js",
+    // for static builds
+    filename: "[name].bundle.js",
     path: path.resolve(__dirname, "./dist")
   },
   module: {
     rules: [
-      {
-        test: /\.html$/,
-        use: ["html-loader"]
-      },
+      // comment out if using ejs static build
+      // {
+      //   test: /\.html$/,
+      //   use: ["html-loader"]
+      // },
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: ["babel-loader"]
       },
+      /*
       // Webpack compilation of stylings only works if imported through React components. Otherwise compile stylings with gulp by running: npm run build
       {
         // test: /\.(css|scss)$/i,
@@ -67,6 +70,7 @@ module.exports = {
           }
         ]
       }
+      */
     ]
   },
   resolve: {

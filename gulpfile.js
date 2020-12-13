@@ -219,6 +219,7 @@ exports.views = views;
 // exports.build = build;
 exports.build = series(
   webpackProd, images, styles
+  // webpackProd
 );
 exports.staticDev = series(
   views, webpackDev, styles, watchStaticDev
@@ -227,7 +228,8 @@ exports.staticDev = series(
   // views, webpackDev, styles, watchStaticDev
 // );
 exports.staticBuild = series(
-  views, styles, webpackProd
+  // views, styles, webpackProd
+  webpackProd, views, styles
 );
 exports.watchProxy = series(
   webpackDev, styles, watchProxy

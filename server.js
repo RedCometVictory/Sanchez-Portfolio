@@ -1,3 +1,4 @@
+// place a copy of particles-w.json file into dist folder
 const express = require('express');
 // const connectDB = require('./congif/db'); or value is-> require('process.env.MONGO_URI');
  

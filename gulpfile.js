@@ -219,6 +219,7 @@ exports.views = views;
 // exports.build = build;
 exports.build = series(
   webpackProd, images, styles
+  // using webpack only, used for img, css, js
   // webpackProd
 );
 exports.staticDev = series(
